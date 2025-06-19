@@ -18,3 +18,13 @@ The backend for the Airbnb Clone project is designed to provide a robust and sca
 - **Redis**: Used for caching and session management.
 - **Docker**: Containerization tool for consistent development and deployment environments.
 - **CI/CD Pipelines**: Automated pipelines for testing and deploying code changes.
+
+## Team Roles and Responsibilities
+- **Software Architect**: Responsible for designing high-level software architecture, selecting tools and platforms, setting up code quality standards and performing code reviews.
+-  **Backend developer**: Responsible for implementing API endpoints, database schemas, and business logic.
+-  **Database Administrator**: Manages database design, indexing, and optimizations.
+-  **Quality Assuarance Engineer**: Ensures the backend functionalities are thoroughly tested and meet quality standards
+-  **Test Automation Engineer**: Writes and mainatains tests scripts for automated testing.
+-  **Devops Engineer**: Handles deployment, monitoring, and scaling of the backend services.
+
+
