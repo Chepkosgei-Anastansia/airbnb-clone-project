@@ -28,3 +28,109 @@ The backend for the Airbnb Clone project is designed to provide a robust and sca
 -  **Devops Engineer**: Handles deployment, monitoring, and scaling of the backend services.
 
 
+## Database Design 
+The Airbnb Clone backend is structured to support key functionalities like user management, property listings, bookings, payments, and reviews. 
+Below is an overview of the core entities and their relationships.
+
+###  Key Entities
+
+### **1. Users**
+
+Represents both guests and hosts in the system.
+
+**Important Fields:**
+- `id`: Unique identifier for the user.
+- `username`: Unique name chosen by the user.
+- `email`: Email address for login and communication.
+- `password_hash`: Encrypted password.
+- `is_host`: Boolean indicating if the user can list properties.
+
+**Relationships:**
+- A user can **create multiple properties**.
+- A user can **make multiple bookings**.
+- A user can **write multiple reviews**.
+- A user can **make payments** for bookings.
+
+### **2. Properties**
+
+Represents listings created by hosts.
+
+**Important Fields:**
+- `id`: Unique identifier for the property.
+- `user_id`: References the host (User).
+- `title`: Title of the property listing.
+- `description`: Detailed description of the property.
+- `price_per_night`: Cost to book the property per night.
+
+**Relationships:**
+- A property is **owned by one user (host)**.
+- A property can **have multiple bookings**.
+- A property can **have multiple reviews**.
+- A property can **have multiple images**.
+
+### **3. Bookings**
+
+Represents a reservation made by a guest for a property.
+
+**Important Fields:**
+- `id`: Unique identifier for the booking.
+- `user_id`: References the guest (User).
+- `property_id`: References the property being booked.
+- `check_in` / `check_out`: Booking period.
+- `total_price`: Calculated price for the stay.
+
+**Relationships:**
+- A booking is **made by one user**.
+- A booking is **linked to one property**.
+- A booking can **have one payment**.
+
+### **4. Payments**
+
+Tracks transactions made for bookings.
+
+**Important Fields:**
+- `id`: Unique identifier for the payment.
+- `booking_id`: References the associated booking.
+- `user_id`: References the payer (User).
+- `amount`: Total amount paid.
+- `payment_status`: Status like “Paid” or “Failed”.
+
+**Relationships:**
+- A payment is **associated with one booking**.
+- A payment is **made by one user**.
+
+### **5. Reviews**
+
+Allows users to review properties after a stay.
+
+**Important Fields:**
+- `id`: Unique identifier for the review.
+- `user_id`: References the reviewer (User).
+- `property_id`: References the reviewed property.
+- `rating`: Numerical rating (e.g., 1–5).
+- `comment`: Text feedback.
+
+**Relationships:**
+- A review is **written by one user**.
+- A review is **about one property**.
+
+### Entity Relationship Summary
+
+- A **user** can own **many properties**.
+- A **property** can have **many bookings** and **many reviews**.
+- A **user** can make **many bookings**, **payments**, and **reviews**.
+- A **booking** belongs to **one user** and **one property**, and can have **one payment**.
+
+
+## Feature Breakdown
+
+
+## API Security
+
+
+## CI/CD Pipeline
+
+
+
+
+
