@@ -9,7 +9,7 @@ The backend for the Airbnb Clone project is designed to provide a robust and sca
 - **Payment Processing**: Integrate a payment system to handle transactions and record payment details.
 - **Review System**: Allow users to leave reviews and ratings for properties.
 - **Data Optimization**: Ensure efficient data retrieval and storage through database optimizations.
-## Tech Tracks
+## Technology Stack
 - **Django**: A high-level Python web framework used for building the RESTful API.
 - **Django REST Framework**: Provides tools for creating and managing RESTful APIs.
 - **PostgreSQL**: A powerful relational database used for data storage.
