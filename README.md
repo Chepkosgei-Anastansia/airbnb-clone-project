@@ -158,9 +158,39 @@ The Airbnb Clone backend includes a range of features that mirror the essential 
 
 
 ## API Security
+Securing the backend APIs is essential to protect sensitive user data, ensure trustworthy transactions, and prevent unauthorized access.
 
+### Key Security Measures
+
+- **JWT Authentication (via Django REST Framework)**: Secure token-based authentication ensures that only authenticated users can access protected routes.
+- **Role-Based Access Control (RBAC)**: Limits access to certain endpoints and actions based on user roles (e.g., host vs. guest).
+- **Rate Limiting (via DRF throttling)**: Protects against brute-force attacks and abuse by limiting excessive API requests.
+- **Input Validation and Sanitization (Django Forms / Serializers)**: Prevents injection attacks by validating data before processing.
+- **HTTPS and Secure Headers (via Django Middleware / Docker Config)**: Enforces encrypted communication and secure HTTP headers to harden endpoints.
+- **Redis-backed Session Management**: Ensures fast and secure session handling for scalable authentication.
+
+### Why Security Matters
+- **User Data Protection**: Protects personal information like emails and passwords from breaches.
+- **Booking and Payment Safety**: Safeguards transactions and booking details from fraud or interception.
+- **Platform Integrity**: Prevents unauthorized API access or tampering with listings, payments, or reviews.
 
 ## CI/CD Pipeline
+Continuous Integration and Continuous Deployment (CI/CD) automate the software delivery process, making releases faster, safer, and more reliable.
+
+### Why CI/CD is Important
+
+- **Rapid Feedback**: Automatically runs tests and linting to catch bugs before merging code.
+- **Consistent Deployments**: Docker ensures that the application behaves the same across development, staging, and production environments.
+- **Improved Collaboration**: Each change can be reviewed and tested in isolation before being merged and deployed.
+- 
+### Tools Used
+
+- **GitHub Actions**: Manages automated workflows like testing, linting, and Docker-based deployments upon each push or pull request.
+- **Docker**: Containerizes the backend (Django, Celery, Redis) for reproducible builds and environment consistency.
+- **Celery with Redis**: Asynchronous tasks (like sending emails, payment confirmations) are processed efficiently in CI environments.
+- **PostgreSQL Service**: Used during CI testing for realistic integration with the production-grade relational database.
+
+
 
 
 
