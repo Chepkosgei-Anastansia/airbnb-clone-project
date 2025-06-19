@@ -124,6 +124,38 @@ Allows users to review properties after a stay.
 
 ## Feature Breakdown
 
+The Airbnb Clone backend includes a range of features that mirror the essential functionalities of the original Airbnb platform. Each feature is designed to support a seamless, secure, and scalable experience for users, hosts, and administrators.
+
+
+### **1. User Authentication**
+
+- **Endpoints**: `/users/`, `/users/{user_id}/`
+- Allows new users to register, authenticate securely, and manage their profiles. Supports role-based access (e.g., guests vs hosts).
+
+
+### **2. Property Management**
+
+- **Endpoints**: `/properties/`, `/properties/{property_id}/`
+- Hosts can create, update, retrieve, and delete property listings. Each listing includes metadata such as pricing, images, and location.
+
+
+### **3. Booking System**
+
+- **Endpoints**: `/bookings/`, `/bookings/{booking_id}/`
+- Enables users to book available properties, manage check-in and check-out dates, and track booking status.
+
+
+### **4. Payment Processing**
+
+- **Endpoints**: `/payments/`
+- Integrates with third-party payment gateways to handle transactions securely. Records payment status and booking associations.
+
+
+### **5. Review System**
+
+- **Endpoints**: `/reviews/`, `/reviews/{review_id}/`
+- Allows users to leave feedback and rate properties. Reviews help build trust and improve platform transparency.
+
 
 ## API Security
 
